@@ -7,18 +7,17 @@ Amplify.configure({
   Auth: {
     Cognito: {
       userPoolId: process.env.NEXT_PUBLIC_COGNITO_USER_POOL_ID || "",
-      userPoolClientId:
-        process.env.NEXT_PUBLIC_COGNITO_USER_POOL_CLIENT_ID || "",
+      userPoolClientId:process.env.NEXT_PUBLIC_COGNITO_USER_POOL_CLIENT_ID || "",
     },
   },
 });
 
 const formFields = {
   signUp: {
-    username: {
-      order: 1,
-      placeholder: "Choose a username",
-      label: "Username",
+    preferred_username: {
+      order: 0,
+      placeholder: "Enter your preferred username",
+      label: "preferred Username",
       inputProps: { required: true },
     },
     email: {
